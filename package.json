@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +20,23 @@
   "bugs": {
     "url": "https://github.com/egmncyln/wordy_web/issues"
   },
-  "homepage": "https://github.com/egmncyln/wordy_web#readme"
+  "homepage": "https://github.com/egmncyln/wordy_web#readme",
+  "dependencies": {
+    "next": "^12.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.18",
+    "@types/react": "^17.0.39",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "autoprefixer": "^10.4.2",
+    "classnames": "^2.3.1",
+    "eslint": "^8.9.0",
+    "jest": "^27.5.1",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.23",
+    "typescript": "^4.5.5"
+  }
 }
