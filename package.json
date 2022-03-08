@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/egmncyln/wordy_web#readme",
   "dependencies": {
+    "@auth0/auth0-react": "^1.9.0",
     "axios": "^0.26.0",
     "next": "^12.1.0",
     "react": "^17.0.2",
