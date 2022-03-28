@@ -8,7 +8,7 @@
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:jsx-a11y/recommended" // for accessibility
+        "plugin:jsx-a11y/recommended" // TODOEge: for accessibility
     ],
     "rules": {
         "no-var": "error"
