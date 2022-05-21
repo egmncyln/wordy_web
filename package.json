@@ -22,8 +22,6 @@
   },
   "homepage": "https://github.com/egmncyln/wordy_web#readme",
   "dependencies": {
-    "@auth0/auth0-react": "^1.10.1",
-    "axios": "^0.27.2",
     "base-64": "^1.0.0",
     "classnames": "^2.3.1",
     "next": "^12.1.6",
