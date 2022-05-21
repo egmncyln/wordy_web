@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { NextPage } from 'next';
 import React from 'react';
 
