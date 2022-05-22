@@ -6,8 +6,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Wordy App</title>
+        <title>Wordy</title>
         <link rel='icon' href='/favicon.ico' />
+        <meta name='description' content='Wordy' />
+        <meta name='keywords' content='English, english, english course' />
+        <meta name='author' content='Egemen Ceylan' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         {/* <script src='scripts/attach-voice.js'></script> */}
         {/* <script src='scripts/event-listeners.js'></script> */}
       </Head>
