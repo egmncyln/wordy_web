@@ -1,3 +1,3 @@
-test('dummy test', () => {
-  expect(200).toBe(200);
+test('Input component test', () => {
+  expect(true).toBeTruthy();
 });

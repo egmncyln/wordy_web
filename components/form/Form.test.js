@@ -14,6 +14,7 @@ test('Form component snapshot', () => {
 
   const snapshot = `
     <form
+      className="form"
       onSubmit={[Function]}
     >
       <button
