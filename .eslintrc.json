@@ -1,22 +1,23 @@
 {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-        "@typescript-eslint"
-    ],
-    "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:jsx-a11y/recommended" // TODOEge: for accessibility
-    ],
-    "rules": {
-        "no-var": "error"
-    },
-    "ignorePatterns": [
-        "node_modules",
-        ".vscode",
-        "*.js",
-        "*.json"
-    ]
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    "no-var": "error"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    ".vscode",
+    "*.js",
+    "*.json"
+  ]
 }
