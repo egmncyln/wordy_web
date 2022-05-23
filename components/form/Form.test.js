@@ -28,7 +28,3 @@ test('Form component snapshot', () => {
 
   expect(component).toMatchInlineSnapshot(snapshot);
 });
-
-test('Form component 2', () => {
-  expect(200).toBe(200);
-});

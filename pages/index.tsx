@@ -5,24 +5,49 @@ import Form from '../components/form/Form';
 import Input from '../components/input/Input';
 
 const Index: NextPage = () => {
+  const strPassword = 'Password';
+  const strEmail = 'E-mail';
+  const strName = 'Name';
+  const strSurname = 'Surname';
+  const strPasswordPlaceholder = '•••••••••';
+  const inputMb = 4;
+
   return (
     <Form onSubmit={e => console.log(e)}>
-      <Input className='mb-4' id='email' type='text' label='E-mail' placeholder='E-mail' />
-      <Input className='mb-4' id='name' type='text' label='Name' placeholder='Name' />
-      <Input className='mb-4' id='surname' type='text' label='Surname' placeholder='Surname' />
       <Input
-        className='mb-4'
-        id='password'
-        type='password'
-        label='Password'
-        placeholder='•••••••••'
+        className={`mb-${inputMb}`}
+        id={strEmail.toLowerCase()}
+        type='text'
+        label={strEmail}
+        placeholder={strEmail}
       />
       <Input
-        className='mb-6'
-        id='confirm-password'
+        className={`mb-${inputMb}`}
+        id={strName.toLowerCase()}
+        type='text'
+        label={strName}
+        placeholder={strName}
+      />
+      <Input
+        className={`mb-${inputMb}`}
+        id={strSurname.toLowerCase()}
+        type='text'
+        label={strSurname}
+        placeholder={strSurname}
+      />
+      <Input
+        className={`mb-${inputMb}`}
+        id={strPassword.toLowerCase()}
         type='password'
-        label='Confirm password'
-        placeholder='•••••••••'
+        label={strPassword}
+        placeholder={strPasswordPlaceholder}
+      />
+      <Input
+        className={`mb-${inputMb + 2}`}
+        id={`confirm-${strPassword.toLowerCase()}`}
+        type='password'
+        label={`Confirm ${strPassword.toLowerCase()}`}
+        placeholder={strPasswordPlaceholder}
       />
       <Button type='submit' color='default' className='w-full'>
         Register
