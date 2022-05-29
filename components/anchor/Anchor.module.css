@@ -1,0 +1,3 @@
+.anchor {
+  @apply font-normal underline text-blue-700 hover:text-blue-800;
+}
