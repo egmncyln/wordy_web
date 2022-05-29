@@ -1,3 +1,3 @@
-test('Button component test', () => {
+test('Dummy component test', () => {
   expect(true).toBeTruthy();
 });

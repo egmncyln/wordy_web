@@ -1,3 +1,3 @@
-test('Input component test', () => {
+test('Dummy component test', () => {
   expect(true).toBeTruthy();
 });
