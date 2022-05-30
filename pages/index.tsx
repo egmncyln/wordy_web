@@ -33,13 +33,7 @@ const Index: NextPage = () => {
 
   return (
     <Form onSubmit={formSubmitHandler}>
-      <Input
-        className='mt-4'
-        id={strEmail.toLowerCase()}
-        type='text'
-        label={strEmail}
-        placeholder={strEmail}
-      />
+      <Input id={strEmail.toLowerCase()} type='text' label={strEmail} placeholder={strEmail} />
       {isPageTypeRegister() && (
         <Input
           className='mt-4'
