@@ -21,20 +21,18 @@ const Index: NextPage = () => {
   const strSurname = 'Surname';
   const strPasswordPlaceholder = '•••••••••';
 
+  const strLogin = 'Login';
+  const strRegister = 'Register';
+
   const isPageTypeRegister = () => pageType === PageTypes.Register;
 
-  const clickAnchorRegisterHandler = e => {
-    e.preventDefault();
-    setPageType(PageTypes.Register);
-  };
+  const formSubmitHandler = e => console.log(e);
 
-  const clickAnchorLoginHandler = e => {
-    e.preventDefault();
-    setPageType(PageTypes.Login);
-  };
+  const anchorClickHandler = () =>
+    isPageTypeRegister() ? setPageType(PageTypes.Login) : setPageType(PageTypes.Register);
 
   return (
-    <Form onSubmit={e => console.log(e)}>
+    <Form onSubmit={formSubmitHandler}>
       <Input
         className='mt-4'
         id={strEmail.toLowerCase()}
@@ -77,15 +75,13 @@ const Index: NextPage = () => {
         />
       )}
       <Button type='submit' color='default' className='w-full mt-6'>
-        {isPageTypeRegister() ? 'Register' : 'Login'}
+        {isPageTypeRegister() ? strRegister : strLogin}
       </Button>
       <Small className='block text-center mt-4'>
         {isPageTypeRegister() ? `Do you already have an account? ` : `Do you have not an account? `}
-        {isPageTypeRegister() ? (
-          <Anchor onClick={clickAnchorLoginHandler}>Login</Anchor>
-        ) : (
-          <Anchor onClick={clickAnchorRegisterHandler}>Register</Anchor>
-        )}
+        <Anchor onClick={anchorClickHandler}>
+          {isPageTypeRegister() ? strLogin : strRegister}
+        </Anchor>
       </Small>
     </Form>
   );

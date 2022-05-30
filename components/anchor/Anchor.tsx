@@ -6,7 +6,9 @@ import cn from 'classnames';
 function Anchor(props) {
   const clickHandler = e => {
     e.preventDefault();
-    props.onClick(e);
+    if (typeof props.onClick === 'function') {
+      props.onClick(e);
+    }
   };
 
   return (

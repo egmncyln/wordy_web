@@ -6,7 +6,9 @@ import cn from 'classnames';
 function Form(props) {
   const submitHandler = e => {
     e.preventDefault();
-    props.onSubmit(e);
+    if (typeof props.onSubmit === 'function') {
+      props.onSubmit(e);
+    }
   };
 
   return (
