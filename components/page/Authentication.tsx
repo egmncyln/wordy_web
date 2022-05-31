@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Anchor from '../web/anchor/Anchor';
 import Button from '../web/button/Button';
@@ -11,8 +11,11 @@ enum PageTypes {
   Signup,
 }
 
+// TODOEgemen: add validations to inputs
 function Authentication() {
   const [pageType, setPageType] = useState(PageTypes.Login);
+
+  //const formEl = useRef(null); // TODOEgemen: reset form after anchor click
 
   const strPassword = 'Password';
   const strEmail = 'E-mail';
@@ -27,8 +30,10 @@ function Authentication() {
 
   const formSubmitHandler = e => console.log(e);
 
-  const anchorClickHandler = () =>
+  const anchorClickHandler = () => {
     isPageTypeSignup() ? setPageType(PageTypes.Login) : setPageType(PageTypes.Signup);
+  };
+
   return (
     <Form onSubmit={formSubmitHandler}>
       <Input id={strEmail.toLowerCase()} type='text' label={strEmail} placeholder={strEmail} />
