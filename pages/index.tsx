@@ -9,7 +9,7 @@ import Small from '../components/small/Small';
 
 enum PageTypes {
   Login,
-  Register,
+  Signup,
 }
 
 const Index: NextPage = () => {
@@ -22,19 +22,19 @@ const Index: NextPage = () => {
   const strPasswordPlaceholder = '•••••••••';
 
   const strLogin = 'Login';
-  const strRegister = 'Register';
+  const strSignup = 'Signup';
 
-  const isPageTypeRegister = () => pageType === PageTypes.Register;
+  const isPageTypeSignup = () => pageType === PageTypes.Signup;
 
   const formSubmitHandler = e => console.log(e);
 
   const anchorClickHandler = () =>
-    isPageTypeRegister() ? setPageType(PageTypes.Login) : setPageType(PageTypes.Register);
+    isPageTypeSignup() ? setPageType(PageTypes.Login) : setPageType(PageTypes.Signup);
 
   return (
     <Form onSubmit={formSubmitHandler}>
       <Input id={strEmail.toLowerCase()} type='text' label={strEmail} placeholder={strEmail} />
-      {isPageTypeRegister() && (
+      {isPageTypeSignup() && (
         <Input
           className='mt-4'
           id={strName.toLowerCase()}
@@ -43,7 +43,7 @@ const Index: NextPage = () => {
           placeholder={strName}
         />
       )}
-      {isPageTypeRegister() && (
+      {isPageTypeSignup() && (
         <Input
           className='mt-4'
           id={strSurname.toLowerCase()}
@@ -59,7 +59,7 @@ const Index: NextPage = () => {
         label={strPassword}
         placeholder={strPasswordPlaceholder}
       />
-      {isPageTypeRegister() && (
+      {isPageTypeSignup() && (
         <Input
           className='mt-4'
           id={`confirm-${strPassword.toLowerCase()}`}
@@ -69,13 +69,11 @@ const Index: NextPage = () => {
         />
       )}
       <Button type='submit' color='default' className='w-full mt-6'>
-        {isPageTypeRegister() ? strRegister : strLogin}
+        {isPageTypeSignup() ? strSignup : strLogin}
       </Button>
       <Small className='block text-center mt-4'>
-        {isPageTypeRegister() ? `Do you already have an account? ` : `Do you have not an account? `}
-        <Anchor onClick={anchorClickHandler}>
-          {isPageTypeRegister() ? strLogin : strRegister}
-        </Anchor>
+        {isPageTypeSignup() ? `Do you already have an account? ` : `Do you have not an account? `}
+        <Anchor onClick={anchorClickHandler}>{isPageTypeSignup() ? strLogin : strSignup}</Anchor>
       </Small>
     </Form>
   );
